@@ -123,7 +123,7 @@
 #	echo i:$i
 #	((i+=1))
 #done
-#
+
 #j=0
 #until [ $j -ge 10 ]; do
 #	echo j:$j
@@ -150,8 +150,8 @@
 #greet Ryan Morning
 #greet Everybody Evening
 
-function numberthings {
-	i=1
+#function numberthings {
+#	i=1
 #	for f in $@; do
 #	echo $i: $f
 #	((i+=1))
@@ -165,12 +165,63 @@ function numberthings {
 #echo $1
 #echo $2
 
-while getopts u:p: option; do
-	case $option in
-	u) user=$OPTARG;;
-	p) pass=$OPTARG;;
-	a) echo "Got the A flag";;
-	b) echo "Got the B flag";;
-	esac
+#while getopts u:p: option; do
+#	case $option in
+#	u) user=$OPTARG;;
+#	p) pass=$OPTARG;;
+#	a) echo "Got the A flag";;
+#	b) echo "Got the B flag";;
+#	?) echo "I don't know what $OPTARG is!";;
+#	esac
+#done
+#echo "User: $user / Pass: $pass"
+
+#echo "what is your name?"
+#read name
+
+#echo "what is your password?"
+#read -s pass
+
+#read -p "what's your favorite animal? " animal
+
+#echo name: $name, pass: $pass, animal: $animal
+
+#select animal in "cat" "dog" "bird" "fish"
+#do
+#	echo "you selected $animal!"
+#	break
+#done
+
+#select option in "cat" "dog" "quit"
+#do
+#	case $option in
+#	cat) echo "cats like to sleep.";;
+#	dog) echo "dogs like to play catch.";;
+#	quit) break;;
+#	*) eco "i'm not sure what that is.";;
+#	esac
+#done
+
+#if [ $# -lt 3 ]; then
+#	cat <<- EOM
+#	This command requires three arguments:
+#	username, userid, and favorite number.
+#	EOM
+#else
+#	# the program goes here
+#	echo "Username: $1"
+#	echo "UserID; $2"
+#	echo "Favorite NUmber: $3"
+#fi
+
+#read -p "favorite animal? [cat] " a
+#while [[ -z "$a" ]]; do
+#	a="cat"
+#done
+#echo "$a was selected."
+
+read -p "what year? [nnnn] " a
+while [[ ! $a =~ [0-9]{4} ]]; do
+	read -p "A year, please! [nnnn] " a
 done
-echo "User: $user / Pass: $pass"
+echo "selected year: $a"
