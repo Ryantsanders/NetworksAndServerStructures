@@ -95,11 +95,25 @@
 #	text string
 #EndOfText
 
-ftp -n <<= Done WithTheUpdate
-	open mirrors.xmission.com
-	user anoymous nothinghere
-	ascii
-	cd gutenberg
-	get GUTINDEX.01
-	bye
-DoneWithTheUpdate
+#ftp -n <<= Done WithTheUpdate
+#	open mirrors.xmission.com
+#	user anoymous nothinghere
+#	ascii
+#	cd gutenberg
+#	get GUTINDEX.01
+#	bye
+#DoneWithTheUpdate
+
+#a=2
+#if [ $a -gt 4 ]; then
+#	echo $a is greater than 4!
+#else
+#	echo $a is not greater than 4!
+#fi
+
+a="This is my string!"
+if [[ $a =~ [0-9]+ ]]; then
+	echo "There are numbers in the string: $a"
+else
+	echo "There are no numbers in the string: $a"
+fi
