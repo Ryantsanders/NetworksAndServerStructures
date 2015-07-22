@@ -111,9 +111,66 @@
 #	echo $a is not greater than 4!
 #fi
 
-a="This is my string!"
-if [[ $a =~ [0-9]+ ]]; then
-	echo "There are numbers in the string: $a"
-else
-	echo "There are no numbers in the string: $a"
-fi
+#a="This is my string!"
+#if [[ $a =~ [0-9]+ ]]; then
+#	echo "There are numbers in the string: $a"
+#else
+#	echo "There are no numbers in the string: $a"
+#fi
+
+#i=0
+#while [ $i -le 10 ]; do
+#	echo i:$i
+#	((i+=1))
+#done
+#
+#j=0
+#until [ $j -ge 10 ]; do
+#	echo j:$j
+#	((j+=1))
+#done
+
+#for i in 1 2 3
+#do
+#	echo $i
+#done
+
+#a="dog"
+#case $a in
+#	cat) echo "Feline";;
+#	dog|puppy) echo "Canine";;
+#	*) echo "No match!";;
+#esac
+
+#function gree {
+#	echo "Hi $1! What a nice $2!"
+#}
+
+#echo "and now, a greeting!"
+#greet Ryan Morning
+#greet Everybody Evening
+
+function numberthings {
+	i=1
+#	for f in $@; do
+#	echo $i: $f
+#	((i+=1))
+
+#	done
+#}
+#numberthings $(ls)
+
+#numberthings pine birch maple spruce
+
+#echo $1
+#echo $2
+
+while getopts u:p: option; do
+	case $option in
+	u) user=$OPTARG;;
+	p) pass=$OPTARG;;
+	a) echo "Got the A flag";;
+	b) echo "Got the B flag";;
+	esac
+done
+echo "User: $user / Pass: $pass"
