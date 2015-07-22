@@ -35,8 +35,22 @@
 #((e+5=5))
 #echo $e
 #((e*=3))
-echo $e
-((e/=3))
-echo $e
-((e-=5))
-echo $e≈
+#echo $e
+#((e/=3))
+#echo $e
+#((e-=5))
+#echo $e
+
+#[[ "cat" == "cat" ]]
+#echo $?
+
+#[[ "cat == "dog" ]]
+#echo $?
+
+#[[ 20 > 100 ]]
+#echo $?
+
+#a=""
+#b="cat"
+#[[ -z $a && -n $b ]]
+#echo $?
